@@ -28,6 +28,7 @@ const server = z.object({
   AWS_KEY_ID: z.string(),
   AWS_SECRET_ACCESS_KEY: z.string(),
   AWS_BUCKET_NAME: z.string(),
+  AWS_FORCE_PATH_STYLE: z.string().nullish(),
   STRIPE_SECRET_KEY: z.string().nullish(),
   STRIPE_WEBHOOK_SECRET: z.string().nullish(),
   STRIPE_MONTHLY_PRICE_ID: z.string().nullish(),
@@ -71,6 +72,7 @@ const processEnv = {
   AWS_KEY_ID: process.env.AWS_KEY_ID,
   AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
   AWS_BUCKET_NAME: process.env.AWS_BUCKET_NAME,
+  AWS_FORCE_PATH_STYLE: process.env.AWS_FORCE_PATH_STYLE,
   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:
     process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
   STRIPE_SECRET_KEY: process.env.STRIPE_SECRET_KEY,

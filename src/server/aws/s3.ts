@@ -8,4 +8,5 @@ export const s3 = new S3({
     accessKeyId: env.AWS_KEY_ID,
     secretAccessKey: env.AWS_SECRET_ACCESS_KEY,
   },
+  forcePathStyle: env.AWS_FORCE_PATH_STYLE === "true",
 });
